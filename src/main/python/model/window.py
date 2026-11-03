@@ -23,4 +23,4 @@ class Window:
     def set_applicationID(self, aid):
          self._applicationID = aid
 
-         
+    
