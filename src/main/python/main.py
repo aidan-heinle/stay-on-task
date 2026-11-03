@@ -5,6 +5,7 @@ from model.session import Session
 from model.task import Task, Task_Status
 from model.user import User
 from model.window import Window
+from controller.notificationController import NotificationController
 
 """
 def main():
@@ -31,7 +32,10 @@ def main():
 """
 
 def main():
-    pass
+    notif = Notification(1, "Time to focus!", "Focus assistant", "9:30 AM")
+    nc = NotificationController()
+    nc.add_notification(notif)
+    nc.send_notification(1)
 
 if __name__ == "__main__":
     main()

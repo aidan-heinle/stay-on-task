@@ -3,9 +3,10 @@ Represents one system notification
 """
 
 class Notification:
-    def __init__(self, nid, message, ts):
+    def __init__(self, nid, message, title, ts):
         self._notificationID = nid
         self._message = message
+        self._title = title
         self._timestamp = ts
 
     def get_notification_id(self):
@@ -22,3 +23,6 @@ class Notification:
 
     def set_timestamp(self, n):
         self._timestamp = n
+
+    def get_title(self):
+        return self._title
