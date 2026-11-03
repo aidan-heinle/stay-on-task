@@ -14,6 +14,9 @@ class User:
     def get_user_name(self):
         return self._name
 
+    def set_user_name(self, n):
+        self._name = n
+
     def get_settingsID(self):
         return self._settingsID
 

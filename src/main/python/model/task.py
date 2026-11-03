@@ -18,4 +18,35 @@ class Task:
         self._end_time = end
         self._status = status # enumeration class Task_Status
 
-    
+    def get_task_id(self):
+        return self._taskID
+
+    def get_title(self):
+        return self._title
+
+    def set_title(self, n):
+        self._title = n
+
+    def get_description(self):
+        return self._description
+
+    def set_description(self, n):
+        self._description = n
+
+    def get_start_time(self):
+        return self._start_time
+
+    def set_start_time(self, n):
+        self._start_time = n
+
+    def get_end_time(self):
+        return self._end_time
+
+    def set_end_time(self, n):
+        self._end_time = n
+
+    def get_status(self):
+        return self._status
+
+    def set_status(self, n):
+        self._status = n
