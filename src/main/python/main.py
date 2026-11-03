@@ -5,7 +5,8 @@ from model.session import Session
 from model.task import Task, Task_Status
 from model.user import User
 from model.window import Window
-from main.python.controller.notification_controller import NotificationController
+from controller.notification_controller import NotificationController
+from controller.window_controller import WindowController
 
 """
 def main():
@@ -36,6 +37,13 @@ def main():
     nc = NotificationController()
     nc.add_notification(notif)
     nc.send_notification(1)
+
+    window_controller = WindowController()
+    current_window = window_controller.get_current_window()
+
+    if current_window:
+        print(f"Current window ID: {current_window.get_windowID()}")
+        print(f"Current window title: {current_window.get_window_title()}")
 
 if __name__ == "__main__":
     main()
