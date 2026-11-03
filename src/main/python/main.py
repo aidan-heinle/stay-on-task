@@ -6,7 +6,7 @@ from model.task import Task, Task_Status
 from model.user import User
 from model.window import Window
 
-
+"""
 def main():
     preferences = Preference(1, 30)
     user = User(1, "Aidan", preferences.get_preference_id())
@@ -28,7 +28,10 @@ def main():
     print(f"Session duration: {session.get_session_duration()} minutes")
     print(f"Notifications enabled: {preferences.get_do_notify()}")
     print(f"Notification: {notification.get_message()}")
+"""
 
+def main():
+    pass
 
 if __name__ == "__main__":
     main()
