@@ -5,7 +5,7 @@ from model.session import Session
 from model.task import Task, Task_Status
 from model.user import User
 from model.window import Window
-from controller.notificationController import NotificationController
+from main.python.controller.notification_controller import NotificationController
 
 """
 def main():
