@@ -10,13 +10,14 @@ class Task_Status(Enum):
     COMPLETED = 3 
 
 class Task:
-    def __init__(self, id, title, desc, start, end=None, status=Task_Status.READY):
+    def __init__(self, id, title, desc, start, end=None, status=Task_Status.READY, allowed_applications=[]):
         self._taskID = id
         self._title = title
         self._description = desc
         self._start_time = start
         self._end_time = end
         self._status = status # enumeration class Task_Status
+        self._allowed_applications = allowed_applications # stored as ID's
 
     def get_task_id(self):
         return self._taskID
@@ -50,3 +51,16 @@ class Task:
 
     def set_status(self, n):
         self._status = n
+
+
+    def add_allowed_application(self, aid):
+        pass
+
+    def remove_allwoed_application(self, aid):
+        pass
+
+    def get_allowed_application(self, aid):
+        pass
+
+    def is_application_allowed(self, aid):
+        pass
