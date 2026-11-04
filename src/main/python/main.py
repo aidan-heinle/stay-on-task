@@ -1,12 +1,5 @@
-from model.application import Application
-from model.notification import Notification
-from model.preferences import Preference
-from model.session import Session
-from model.task import Task, Task_Status
-from model.user import User
-from model.window import Window
-from controller.notification_controller import NotificationController
-from controller.window_controller import WindowController
+from model import *
+from controller import *
 
 """
 def main():
