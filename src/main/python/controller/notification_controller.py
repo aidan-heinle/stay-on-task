@@ -10,7 +10,7 @@ class NotificationController:
     # removes notification by ID, returns bool for success.
     def remove_notifications(self, nid):
         for notification in self._notifications:
-            if notification.get_notification_id == nid:
+            if notification.get_notification_id() == nid:
                 self._notifications.remove(notification)
                 return True
 

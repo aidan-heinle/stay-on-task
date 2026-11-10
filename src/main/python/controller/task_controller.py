@@ -10,17 +10,22 @@ class TaskController:
 
     def remove_task(self, tid):
         for task in self._tasks:
-            if task.get_taskID == tid:
+            if task.get_task_id() == tid:
                 self._tasks.remove(task)
+                if self._current_task is task:
+                    self._current_task = None
                 return True
 
         return False
 
     def get_task(self, tid):
-        pass
+        return next((task for task in self._tasks if task.get_task_id() == tid), None)
 
     def set_current_task(self, tid):
-        pass
+        task = self.get_task(tid)
+        if task is None:
+            raise ValueError(f"Unknown task ID: {tid}")
+        self._current_task = task
 
-    def get_current_task(self, tid):
-        pass
+    def get_current_task(self):
+        return self._current_task

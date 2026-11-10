@@ -3,10 +3,10 @@ Represents an open window
 """
 
 class Window:
-    def __init__(self, wid, title, applicationID):
+    def __init__(self, wid, title, process_id):
         self._windowID = wid
         self._window_title = title
-        self._applicationID = applicationID
+        self._process_id = process_id
 
     def get_windowID(self):
         return self._windowID
@@ -14,13 +14,12 @@ class Window:
     def get_window_title(self):
             return self._window_title
 
-    def get_applicationID(self):
-         return self._applicationID
+    def get_process_id(self):
+         return self._process_id
 
     def set_window_title(self, title):
          self._window_title = title
 
-    def set_applicationID(self, aid):
-         self._applicationID = aid
+    def set_process_id(self, pid):
+         self._process_id = pid
 
-    
